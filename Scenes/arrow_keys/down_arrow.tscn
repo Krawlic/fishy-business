@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc5yqfj15sp7b"]
+
+[ext_resource type="Texture2D" uid="uid://boliv81eqplks" path="res://Art/UI/down_arrow.png" id="1_0ria8"]
+
+[node name="down_arrow" type="TextureRect"]
+texture = ExtResource("1_0ria8")

@@ -1,0 +1,74 @@
+[gd_scene load_steps=16 format=3 uid="uid://chamuuxe7hige"]
+
+[ext_resource type="Script" path="res://bonus_features.gd" id="1_updhd"]
+[ext_resource type="Texture2D" uid="uid://biknld5dq6kv7" path="res://Art/UI/bonus_btn.png" id="2_no7o5"]
+[ext_resource type="Texture2D" uid="uid://4c4ru3cxgqqx" path="res://Art/UI/selected_64.png" id="3_8afd5"]
+[ext_resource type="AudioStream" uid="uid://bq3cyf0al626c" path="res://Scenes/fishing/sfx/select.wav" id="3_ui6fe"]
+[ext_resource type="Texture2D" uid="uid://dfw2dwyprmrmq" path="res://Art/UI/left_arrow.png" id="4_lg2kn"]
+[ext_resource type="Texture2D" uid="uid://v5fq06ptaunq" path="res://Art/UI/buttons.png" id="5_jnwvq"]
+[ext_resource type="Texture2D" uid="uid://b3xqwvm4o1pye" path="res://Art/UI/selected_16.png" id="7_s5to8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m5lk6"]
+texture = ExtResource("2_no7o5")
+region_rect = Rect2(0, 0, 64, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pe51k"]
+texture = ExtResource("2_no7o5")
+region_rect = Rect2(64, 0, 64, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wsctt"]
+texture = ExtResource("2_no7o5")
+region_rect = Rect2(64, 0, 64, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6a4va"]
+texture = ExtResource("3_8afd5")
+expand_margin_top = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8dgkw"]
+texture = ExtResource("4_lg2kn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v7u03"]
+texture = ExtResource("5_jnwvq")
+region_rect = Rect2(64, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wpabc"]
+texture = ExtResource("5_jnwvq")
+region_rect = Rect2(64, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rxvv2"]
+texture = ExtResource("7_s5to8")
+
+[node name="bonus_features" type="Node2D"]
+script = ExtResource("1_updhd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 64.0
+offset_bottom = 64.0
+color = Color(0.443137, 0.513726, 0.333333, 1)
+
+[node name="catalogue_btn" type="Button" parent="."]
+offset_right = 64.0
+offset_bottom = 16.0
+focus_neighbor_bottom = NodePath("../back_btn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_m5lk6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pe51k")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wsctt")
+theme_override_styles/focus = SubResource("StyleBoxTexture_6a4va")
+
+[node name="select_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ui6fe")
+
+[node name="back_btn" type="Button" parent="."]
+offset_top = 48.0
+offset_right = 16.0
+offset_bottom = 64.0
+focus_neighbor_top = NodePath("../catalogue_btn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_8dgkw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v7u03")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wpabc")
+theme_override_styles/focus = SubResource("StyleBoxTexture_rxvv2")
+
+[connection signal="button_down" from="catalogue_btn" to="." method="_on_catalogue_btn_button_down"]
+[connection signal="button_up" from="catalogue_btn" to="." method="_on_catalogue_btn_button_up"]
+[connection signal="button_down" from="back_btn" to="." method="_on_back_btn_button_down"]
+[connection signal="button_up" from="back_btn" to="." method="_on_back_btn_button_up"]

@@ -1,0 +1,98 @@
+[gd_scene load_steps=15 format=3 uid="uid://sb3duw3xaqb7"]
+
+[ext_resource type="Texture2D" uid="uid://c4qu4odg6702s" path="res://Art/Scenes/SpeedUP.png" id="1_c4y0j"]
+[ext_resource type="Script" path="res://Scenes/fishing/speed_up.gd" id="1_nojwc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2fds"]
+atlas = ExtResource("1_c4y0j")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sy5og"]
+atlas = ExtResource("1_c4y0j")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpgpn"]
+atlas = ExtResource("1_c4y0j")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drnp4"]
+atlas = ExtResource("1_c4y0j")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fljm"]
+atlas = ExtResource("1_c4y0j")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xn4na"]
+atlas = ExtResource("1_c4y0j")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqqd4"]
+atlas = ExtResource("1_c4y0j")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0jfd"]
+atlas = ExtResource("1_c4y0j")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76uoi"]
+atlas = ExtResource("1_c4y0j")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53e0q"]
+atlas = ExtResource("1_c4y0j")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tf7e2"]
+atlas = ExtResource("1_c4y0j")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mctvo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2fds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sy5og")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpgpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drnp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fljm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xn4na")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqqd4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0jfd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76uoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53e0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tf7e2")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="SpeedUP" type="Node2D"]
+script = ExtResource("1_nojwc")
+
+[node name="screen" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_mctvo")
+
+[connection signal="animation_finished" from="screen" to="." method="_on_screen_animation_finished"]

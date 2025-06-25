@@ -1,0 +1,111 @@
+[gd_scene load_steps=20 format=3 uid="uid://cp7dvxcg5l23x"]
+
+[ext_resource type="Script" path="res://Scenes/fishing/game_over.gd" id="1_lsla7"]
+[ext_resource type="Texture2D" uid="uid://ddauyfbbtcewf" path="res://Art/Scenes/gameover/gameover.png" id="1_u4ac7"]
+[ext_resource type="FontFile" uid="uid://cqlcvp6hx1bcu" path="res://Art/UI/soggy-fishing.ttf" id="2_mhwbh"]
+[ext_resource type="AudioStream" uid="uid://p0ep554citwd" path="res://Scenes/fishing/sfx/gameover.wav" id="4_2ttk1"]
+[ext_resource type="Texture2D" uid="uid://b3yugv8fgy2ho" path="res://Art/UI/mainmenu_up.png" id="5_3tmty"]
+[ext_resource type="Texture2D" uid="uid://b8lyrvlwiftld" path="res://Art/UI/mainmenu_down.png" id="6_q8sww"]
+[ext_resource type="AudioStream" uid="uid://bq3cyf0al626c" path="res://Scenes/fishing/sfx/select.wav" id="7_7n2cu"]
+[ext_resource type="Texture2D" uid="uid://4c4ru3cxgqqx" path="res://Art/UI/selected_64.png" id="7_bhva1"]
+[ext_resource type="Texture2D" uid="uid://cotcvl7n2wk80" path="res://Art/Scenes/gameover/new_hiscore.png" id="8_m7fnd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a3lnm"]
+font = ExtResource("2_mhwbh")
+font_size = 8
+font_color = Color(0.811765, 0.882353, 0.72549, 1)
+outline_color = Color(0.443137, 0.513726, 0.333333, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_270j3"]
+texture = ExtResource("5_3tmty")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hctsk"]
+texture = ExtResource("6_q8sww")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gt8mw"]
+texture = ExtResource("7_bhva1")
+expand_margin_top = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3edue"]
+atlas = ExtResource("8_m7fnd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mcj2"]
+atlas = ExtResource("8_m7fnd")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qr5tv"]
+atlas = ExtResource("8_m7fnd")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmylt"]
+atlas = ExtResource("8_m7fnd")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o578k"]
+atlas = ExtResource("8_m7fnd")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xotc7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3edue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mcj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qr5tv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmylt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o578k")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="gameover" type="Node2D"]
+script = ExtResource("1_lsla7")
+
+[node name="gameover_screen" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_u4ac7")
+
+[node name="score_label" type="Label" parent="gameover_screen"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 35.0
+offset_right = 52.0
+offset_bottom = 45.0
+text = "565"
+label_settings = SubResource("LabelSettings_a3lnm")
+horizontal_alignment = 1
+
+[node name="gameover_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_2ttk1")
+volume_db = 5.0
+
+[node name="mainmenu_btn" type="Button" parent="."]
+offset_top = 48.0
+offset_right = 64.0
+offset_bottom = 64.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_270j3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hctsk")
+theme_override_styles/focus = SubResource("StyleBoxTexture_gt8mw")
+
+[node name="select_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_7n2cu")
+
+[node name="new_hiscore_unlock" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_xotc7")
+
+[connection signal="button_down" from="mainmenu_btn" to="." method="_on_mainmenu_btn_button_down"]
+[connection signal="button_up" from="mainmenu_btn" to="." method="_on_mainmenu_btn_button_up"]

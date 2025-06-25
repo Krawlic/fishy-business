@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1iaefkbixxyl"]
+
+[ext_resource type="Texture2D" uid="uid://b3u0h17ckcmf8" path="res://Art/UI/right_arrow.png" id="1_ipefj"]
+
+[node name="right_arrow" type="TextureRect"]
+custom_minimum_size = Vector2(16, 16)
+texture = ExtResource("1_ipefj")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cop3wl3pfdrgk"]
+
+[ext_resource type="Texture2D" uid="uid://dfw2dwyprmrmq" path="res://Art/UI/left_arrow.png" id="1_p2i7i"]
+
+[node name="left_arrow" type="TextureRect"]
+texture = ExtResource("1_p2i7i")

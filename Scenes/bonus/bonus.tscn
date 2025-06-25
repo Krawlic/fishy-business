@@ -1,0 +1,37 @@
+[gd_scene load_steps=9 format=3 uid="uid://dirxkpts0d0tb"]
+
+[ext_resource type="Texture2D" uid="uid://d2ur0410jxnn" path="res://Art/Scenes/bonus features/bonus_unlocked.png" id="1_cwcbw"]
+[ext_resource type="Script" path="res://Scenes/bonus/bonus.gd" id="1_sh371"]
+[ext_resource type="Texture2D" uid="uid://b3yugv8fgy2ho" path="res://Art/UI/mainmenu_up.png" id="2_eddd4"]
+[ext_resource type="Texture2D" uid="uid://b8lyrvlwiftld" path="res://Art/UI/mainmenu_down.png" id="3_8ykld"]
+[ext_resource type="AudioStream" uid="uid://bq3cyf0al626c" path="res://Scenes/fishing/sfx/select.wav" id="5_gcygn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_03xw3"]
+texture = ExtResource("2_eddd4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y7pfb"]
+texture = ExtResource("3_8ykld")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ewtkc"]
+
+[node name="Bonus" type="Node2D"]
+script = ExtResource("1_sh371")
+
+[node name="bonus_screen" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_cwcbw")
+
+[node name="mainmenu_btn" type="Button" parent="."]
+offset_top = 48.0
+offset_right = 64.0
+offset_bottom = 64.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_03xw3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_y7pfb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ewtkc")
+
+[node name="select_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_gcygn")
+
+[connection signal="button_down" from="mainmenu_btn" to="." method="_on_mainmenu_btn_button_down"]
+[connection signal="button_up" from="mainmenu_btn" to="." method="_on_mainmenu_btn_button_up"]

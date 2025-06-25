@@ -1,0 +1,44 @@
+[gd_scene load_steps=11 format=3 uid="uid://d0tbshk5q06cj"]
+
+[ext_resource type="Script" path="res://howto.gd" id="1_hsv1h"]
+[ext_resource type="Texture2D" uid="uid://bqg2vjm4wy1ay" path="res://Art/Scenes/howto/howto.png" id="2_d2500"]
+[ext_resource type="AudioStream" uid="uid://bq3cyf0al626c" path="res://Scenes/fishing/sfx/select.wav" id="3_tn46l"]
+[ext_resource type="Texture2D" uid="uid://dfw2dwyprmrmq" path="res://Art/UI/left_arrow.png" id="4_5vpx8"]
+[ext_resource type="Texture2D" uid="uid://v5fq06ptaunq" path="res://Art/UI/buttons.png" id="5_kqghv"]
+[ext_resource type="Texture2D" uid="uid://b3xqwvm4o1pye" path="res://Art/UI/selected_16.png" id="6_rv7f5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o58eh"]
+texture = ExtResource("4_5vpx8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_boyt0"]
+texture = ExtResource("5_kqghv")
+region_rect = Rect2(64, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_77cln"]
+texture = ExtResource("5_kqghv")
+region_rect = Rect2(64, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ar1cc"]
+texture = ExtResource("6_rv7f5")
+
+[node name="howto" type="Node2D"]
+script = ExtResource("1_hsv1h")
+
+[node name="Howto" type="Sprite2D" parent="."]
+position = Vector2(32, 32)
+texture = ExtResource("2_d2500")
+
+[node name="select_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_tn46l")
+
+[node name="back_btn" type="Button" parent="."]
+offset_top = 49.0
+offset_right = 16.0
+offset_bottom = 65.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_o58eh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_boyt0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_77cln")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ar1cc")
+
+[connection signal="button_down" from="back_btn" to="." method="_on_back_btn_button_down"]
+[connection signal="button_up" from="back_btn" to="." method="_on_back_btn_button_up"]

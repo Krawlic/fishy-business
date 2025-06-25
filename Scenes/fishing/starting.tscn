@@ -1,0 +1,184 @@
+[gd_scene load_steps=39 format=3 uid="uid://2e1io5t5quom"]
+
+[ext_resource type="Texture2D" uid="uid://csffwqmpbitsy" path="res://Art/Scenes/splash/splash.png" id="1_2g3vp"]
+[ext_resource type="Script" path="res://Scenes/fishing/starting.gd" id="1_12fel"]
+[ext_resource type="Texture2D" uid="uid://dbomvg45l0dq4" path="res://Art/UI/options_up.png" id="2_xc5l3"]
+[ext_resource type="Texture2D" uid="uid://dn2anrn6hm7fd" path="res://Art/UI/options_down.png" id="3_wc5on"]
+[ext_resource type="Texture2D" uid="uid://dqivfxeyhm1o7" path="res://Art/UI/start_up.png" id="4_w4nhq"]
+[ext_resource type="Texture2D" uid="uid://cykp7b042scs2" path="res://Art/UI/selected_32.png" id="5_fjmfn"]
+[ext_resource type="Texture2D" uid="uid://by8yju78supyc" path="res://Art/UI/start_down.png" id="5_l65m3"]
+[ext_resource type="Texture2D" uid="uid://0xqciuun0uux" path="res://Art/UI/howtoplay_up.png" id="6_a7ulj"]
+[ext_resource type="Texture2D" uid="uid://bu8umpvg72ppr" path="res://Art/UI/howtoplay_down.png" id="7_mwg58"]
+[ext_resource type="AudioStream" uid="uid://bq3cyf0al626c" path="res://Scenes/fishing/sfx/select.wav" id="9_5bqnk"]
+[ext_resource type="Texture2D" uid="uid://4c4ru3cxgqqx" path="res://Art/UI/selected_64.png" id="10_7xxkm"]
+[ext_resource type="Texture2D" uid="uid://dyonl5kemmrlb" path="res://Art/UI/close_btn.png" id="10_igu6w"]
+[ext_resource type="Texture2D" uid="uid://chdrsm8daefns" path="res://Art/UI/catalogue_btn.png" id="10_oupn0"]
+[ext_resource type="Texture2D" uid="uid://ci4qoflgaabcc" path="res://Art/UI/catalogue_btn_down.png" id="11_ags5a"]
+[ext_resource type="Texture2D" uid="uid://bc0qelwr1yyff" path="res://Art/UI/close_btn_down.png" id="11_wyu3y"]
+[ext_resource type="Texture2D" uid="uid://dv2jh66j83uqn" path="res://Art/UI/selected_catalogue.png" id="14_kdhsu"]
+[ext_resource type="Texture2D" uid="uid://b852tei1cug7r" path="res://Art/UI/selected_exit.png" id="17_ea0th"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ppvmm"]
+texture = ExtResource("2_xc5l3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_086pp"]
+texture = ExtResource("3_wc5on")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4a0we"]
+texture = ExtResource("3_wc5on")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u76gy"]
+texture = ExtResource("5_fjmfn")
+expand_margin_top = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mxl88"]
+texture = ExtResource("4_w4nhq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s30ai"]
+texture = ExtResource("5_l65m3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rfp2k"]
+texture = ExtResource("5_l65m3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o1cf5"]
+texture = ExtResource("5_fjmfn")
+expand_margin_top = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7q8go"]
+texture = ExtResource("6_a7ulj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1rlpo"]
+texture = ExtResource("7_mwg58")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l7eqs"]
+texture = ExtResource("7_mwg58")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7xgp5"]
+texture = ExtResource("10_7xxkm")
+expand_margin_top = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lqdtj"]
+texture = ExtResource("10_oupn0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p5dmp"]
+texture = ExtResource("11_ags5a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ywhc6"]
+texture = ExtResource("11_ags5a")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ajw7u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t3nm4"]
+texture = ExtResource("14_kdhsu")
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g60hw"]
+texture = ExtResource("10_igu6w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0p0n3"]
+texture = ExtResource("11_wyu3y")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ak2n1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_unn6y"]
+texture = ExtResource("17_ea0th")
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[node name="Starting" type="Node2D"]
+script = ExtResource("1_12fel")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_2g3vp")
+
+[node name="option_btn" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 48.0
+focus_neighbor_left = NodePath("../start_btn")
+focus_neighbor_top = NodePath("../close_btn")
+focus_neighbor_bottom = NodePath("../howtoplay_btn")
+focus_next = NodePath("../howtoplay_btn")
+focus_previous = NodePath("../start_btn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ppvmm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_086pp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4a0we")
+theme_override_styles/focus = SubResource("StyleBoxTexture_u76gy")
+
+[node name="start_btn" type="Button" parent="."]
+offset_top = 32.0
+offset_right = 32.0
+offset_bottom = 48.0
+focus_neighbor_top = NodePath("../catalogue_btn")
+focus_neighbor_right = NodePath("../option_btn")
+focus_neighbor_bottom = NodePath("../howtoplay_btn")
+focus_next = NodePath("../option_btn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_mxl88")
+theme_override_styles/hover = SubResource("StyleBoxTexture_s30ai")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rfp2k")
+theme_override_styles/focus = SubResource("StyleBoxTexture_o1cf5")
+
+[node name="howtoplay_btn" type="Button" parent="."]
+offset_top = 48.0
+offset_right = 64.0
+offset_bottom = 64.0
+focus_neighbor_top = NodePath("../start_btn")
+focus_next = NodePath("../close_btn")
+focus_previous = NodePath("../option_btn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_7q8go")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1rlpo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_l7eqs")
+theme_override_styles/focus = SubResource("StyleBoxTexture_7xgp5")
+
+[node name="select_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_5bqnk")
+
+[node name="catalogue_btn" type="Button" parent="."]
+visible = false
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 9.0
+offset_bottom = 9.0
+focus_neighbor_right = NodePath("../close_btn")
+focus_neighbor_bottom = NodePath("../start_btn")
+focus_next = NodePath("../close_btn")
+focus_previous = NodePath("../start_btn")
+theme_override_constants/icon_max_width = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_lqdtj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_p5dmp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ywhc6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ajw7u")
+theme_override_styles/focus = SubResource("StyleBoxTexture_t3nm4")
+disabled = true
+
+[node name="close_btn" type="Button" parent="."]
+offset_left = 55.0
+offset_top = 1.0
+offset_right = 63.0
+offset_bottom = 9.0
+focus_neighbor_left = NodePath("../catalogue_btn")
+focus_neighbor_bottom = NodePath("../option_btn")
+focus_next = NodePath("../start_btn")
+focus_previous = NodePath("../catalogue_btn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_g60hw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0p0n3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ak2n1")
+theme_override_styles/focus = SubResource("StyleBoxTexture_unn6y")
+
+[connection signal="button_down" from="option_btn" to="." method="_on_option_btn_button_down"]
+[connection signal="button_up" from="option_btn" to="." method="_on_option_btn_button_up"]
+[connection signal="button_down" from="start_btn" to="." method="_on_start_btn_button_down"]
+[connection signal="button_up" from="start_btn" to="." method="_on_start_btn_button_up"]
+[connection signal="button_down" from="howtoplay_btn" to="." method="_on_howtoplay_btn_button_down"]
+[connection signal="button_up" from="howtoplay_btn" to="." method="_on_howtoplay_btn_button_up"]
+[connection signal="button_down" from="catalogue_btn" to="." method="_on_catalogue_btn_button_down"]
+[connection signal="button_up" from="catalogue_btn" to="." method="_on_catalogue_btn_button_up"]
+[connection signal="button_up" from="close_btn" to="." method="_on_close_btn_button_up"]

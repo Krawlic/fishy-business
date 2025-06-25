@@ -1,0 +1,367 @@
+[gd_scene load_steps=41 format=3 uid="uid://5g3fc3bqbp2i"]
+
+[ext_resource type="Script" path="res://Scenes/cleaning/cleaning.gd" id="1_c6dsj"]
+[ext_resource type="Texture2D" uid="uid://dpkinqig1u1cm" path="res://Art/Scenes/cleaning/cleaning.png" id="1_f5lkx"]
+[ext_resource type="Texture2D" uid="uid://2qkkahrehvuj" path="res://Art/Scenes/boat/boat_scene_sheet.png" id="2_fjci6"]
+[ext_resource type="Texture2D" uid="uid://cno2xllaouhnv" path="res://Art/Items/catchables.png" id="3_vq26d"]
+[ext_resource type="Texture2D" uid="uid://d3r1hqfbs8jxe" path="res://Art/Scenes/cleaning/ocean_splash.png" id="4_4nob5"]
+[ext_resource type="Texture2D" uid="uid://byv1rgr374drp" path="res://Art/Items/Usefuls.png" id="4_lxjvi"]
+[ext_resource type="PackedScene" uid="uid://dc5yqfj15sp7b" path="res://Scenes/arrow_keys/down_arrow.tscn" id="6_eltfr"]
+[ext_resource type="PackedScene" uid="uid://c1iaefkbixxyl" path="res://Scenes/arrow_keys/right_arrow.tscn" id="7_nsc0p"]
+[ext_resource type="PackedScene" uid="uid://cop3wl3pfdrgk" path="res://Scenes/arrow_keys/left_arrow.tscn" id="8_7yt5y"]
+[ext_resource type="PackedScene" uid="uid://drttjhjkv4u06" path="res://Scenes/arrow_keys/up_arrow.tscn" id="9_rcoh0"]
+[ext_resource type="AudioStream" uid="uid://brrqgr038v8du" path="res://Scenes/fishing/sfx/key_hit.wav" id="10_e437u"]
+[ext_resource type="AudioStream" uid="uid://cfl8he2jddy0q" path="res://Scenes/fishing/sfx/trash.wav" id="11_30603"]
+[ext_resource type="AudioStream" uid="uid://jni4b4d4f6wh" path="res://Scenes/fishing/sfx/break.wav" id="11_kiyjb"]
+[ext_resource type="AudioStream" uid="uid://baaug15wnejwc" path="res://Scenes/fishing/sfx/scale.wav" id="13_3ig22"]
+[ext_resource type="AudioStream" uid="uid://dc5en5cj4m2ri" path="res://Scenes/fishing/sfx/wash.wav" id="14_p3vry"]
+[ext_resource type="AudioStream" uid="uid://blvjwxav3fkrv" path="res://Scenes/fishing/sfx/cooler.wav" id="15_2vsfs"]
+[ext_resource type="AudioStream" uid="uid://cjnifuvvt5g8q" path="res://Scenes/fishing/sfx/success.wav" id="15_nc8am"]
+[ext_resource type="AudioStream" uid="uid://dp6mogiiou7d8" path="res://Scenes/fishing/sfx/fishspawn.wav" id="17_o2pdn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85rdp"]
+atlas = ExtResource("1_f5lkx")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7p1d0"]
+atlas = ExtResource("1_f5lkx")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3uh7j"]
+atlas = ExtResource("1_f5lkx")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p13v7"]
+atlas = ExtResource("1_f5lkx")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sk1y7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85rdp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7p1d0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3uh7j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p13v7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qqyo"]
+atlas = ExtResource("1_f5lkx")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exohe"]
+atlas = ExtResource("1_f5lkx")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdt1m"]
+atlas = ExtResource("1_f5lkx")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clltv"]
+atlas = ExtResource("1_f5lkx")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opjpy"]
+atlas = ExtResource("1_f5lkx")
+region = Rect2(256, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vpjid"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qqyo")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exohe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdt1m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clltv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opjpy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clltv")
+}],
+"loop": true,
+"name": &"running",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lpv7"]
+atlas = ExtResource("1_f5lkx")
+region = Rect2(0, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3f8m"]
+atlas = ExtResource("1_f5lkx")
+region = Rect2(64, 320, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tmub5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lpv7")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3f8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3f8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3f8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lpv7")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yl3b0"]
+atlas = ExtResource("4_4nob5")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3tqp8"]
+atlas = ExtResource("4_4nob5")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djtys"]
+atlas = ExtResource("4_4nob5")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75ed6"]
+atlas = ExtResource("4_4nob5")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jikfy"]
+atlas = ExtResource("4_4nob5")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5jmh"]
+atlas = ExtResource("4_4nob5")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gq30e"]
+atlas = ExtResource("4_4nob5")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jimji"]
+animations = [{
+"frames": [],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yl3b0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3tqp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djtys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75ed6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jikfy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5jmh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gq30e")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"splash",
+"speed": 7.0
+}]
+
+[node name="cleaning" type="Node2D"]
+script = ExtResource("1_c6dsj")
+
+[node name="cleaning_screen" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_sk1y7")
+
+[node name="objects" type="Node2D" parent="cleaning_screen"]
+
+[node name="dock" type="Sprite2D" parent="cleaning_screen/objects"]
+texture = ExtResource("1_f5lkx")
+hframes = 5
+vframes = 7
+frame = 5
+
+[node name="table" type="Sprite2D" parent="cleaning_screen/objects"]
+texture = ExtResource("1_f5lkx")
+hframes = 5
+vframes = 7
+frame = 10
+
+[node name="table_slot" type="Node2D" parent="cleaning_screen/objects/table"]
+position = Vector2(1, 5)
+
+[node name="sink" type="AnimatedSprite2D" parent="cleaning_screen/objects"]
+sprite_frames = SubResource("SpriteFrames_vpjid")
+animation = &"running"
+
+[node name="sink_slot" type="Node2D" parent="cleaning_screen/objects/sink"]
+position = Vector2(-22, 5)
+
+[node name="cooler" type="Sprite2D" parent="cleaning_screen/objects"]
+texture = ExtResource("1_f5lkx")
+hframes = 5
+vframes = 7
+frame = 20
+
+[node name="cooler_slot" type="Node2D" parent="cleaning_screen/objects/cooler"]
+position = Vector2(-22, 21)
+
+[node name="wheelbarrow" type="Sprite2D" parent="cleaning_screen/objects"]
+texture = ExtResource("1_f5lkx")
+hframes = 5
+vframes = 7
+frame = 30
+
+[node name="wheelbarrow_slot" type="Node2D" parent="cleaning_screen/objects/wheelbarrow"]
+position = Vector2(21, 23)
+
+[node name="sid" type="Sprite2D" parent="cleaning_screen/objects"]
+position = Vector2(-1, 16)
+texture = ExtResource("2_fjci6")
+hframes = 11
+vframes = 10
+frame = 33
+
+[node name="trashcan" type="AnimatedSprite2D" parent="cleaning_screen/objects"]
+sprite_frames = SubResource("SpriteFrames_tmub5")
+animation = &"closed"
+
+[node name="trashcan_slot" type="Node2D" parent="cleaning_screen/objects/trashcan"]
+position = Vector2(23, 3)
+
+[node name="ocean_slot" type="Node2D" parent="cleaning_screen/objects"]
+position = Vector2(1, -19)
+
+[node name="ocean_splash" type="AnimatedSprite2D" parent="cleaning_screen/objects/ocean_slot"]
+sprite_frames = SubResource("SpriteFrames_jimji")
+animation = &"idle"
+
+[node name="splash_timer" type="Timer" parent="cleaning_screen/objects/ocean_slot/ocean_splash"]
+wait_time = 0.23
+one_shot = true
+
+[node name="catch_sprite" type="Sprite2D" parent="cleaning_screen"]
+visible = false
+position = Vector2(20, 22)
+texture = ExtResource("3_vq26d")
+hframes = 4
+vframes = 4
+
+[node name="scaler" type="Sprite2D" parent="cleaning_screen"]
+position = Vector2(12, 4)
+texture = ExtResource("4_lxjvi")
+hframes = 4
+vframes = 4
+
+[node name="fail_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="success_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="wait_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="down_arrow" parent="." instance=ExtResource("6_eltfr")]
+visible = false
+offset_left = 1.0
+offset_top = 7.0
+offset_right = 17.0
+offset_bottom = 23.0
+
+[node name="right_arrow" parent="." instance=ExtResource("7_nsc0p")]
+visible = false
+offset_left = 48.0
+offset_top = 7.0
+offset_right = 64.0
+offset_bottom = 23.0
+
+[node name="left_arrow" parent="." instance=ExtResource("8_7yt5y")]
+visible = false
+offset_left = 14.0
+offset_top = 7.0
+offset_right = 30.0
+offset_bottom = 23.0
+
+[node name="up_arrow" parent="." instance=ExtResource("9_rcoh0")]
+visible = false
+offset_left = 27.0
+offset_top = 7.0
+offset_right = 43.0
+offset_bottom = 23.0
+
+[node name="key_container" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(64, 16)
+offset_right = 64.0
+offset_bottom = 16.0
+theme_override_constants/separation = 0
+
+[node name="key_hit_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_e437u")
+
+[node name="trash_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_30603")
+
+[node name="break_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_kiyjb")
+
+[node name="table_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_p3vry")
+
+[node name="sink_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_3ig22")
+
+[node name="cooler_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_2vsfs")
+
+[node name="success_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_nc8am")
+
+[node name="fishspawn_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_o2pdn")
+
+[connection signal="timeout" from="cleaning_screen/objects/ocean_slot/ocean_splash/splash_timer" to="." method="_on_splash_timer_timeout"]
+[connection signal="timeout" from="fail_timer" to="." method="_on_fail_timer_timeout"]
+[connection signal="timeout" from="success_timer" to="." method="_on_success_timer_timeout"]
+[connection signal="timeout" from="wait_timer" to="." method="_on_wait_timer_timeout"]

@@ -1,0 +1,456 @@
+[gd_scene load_steps=53 format=3 uid="uid://cwep8p6d75vm3"]
+
+[ext_resource type="Script" path="res://Scenes/catalogue/catalogue.gd" id="1_7bnl7"]
+[ext_resource type="Texture2D" uid="uid://7l0xl8fmfu0v" path="res://Art/Items/catchables_catalogue_bg.png" id="1_lmy6i"]
+[ext_resource type="Texture2D" uid="uid://v5fq06ptaunq" path="res://Art/UI/buttons.png" id="2_e6bl1"]
+[ext_resource type="AudioStream" uid="uid://bq3cyf0al626c" path="res://Scenes/fishing/sfx/select.wav" id="4_hfmfw"]
+[ext_resource type="Texture2D" uid="uid://dr782ajwdrf2t" path="res://Scenes/catalogue/sardine.png" id="5_c5l6t"]
+[ext_resource type="Texture2D" uid="uid://bj1qi4ytnht5w" path="res://Scenes/catalogue/Lionfish.png" id="6_4otdw"]
+[ext_resource type="Texture2D" uid="uid://cjv6lpjqwt1wr" path="res://Scenes/catalogue/shrimp.png" id="7_jckth"]
+[ext_resource type="Texture2D" uid="uid://drfddv5oqh7v6" path="res://Scenes/catalogue/squid.png" id="8_80pte"]
+[ext_resource type="Texture2D" uid="uid://b5fr2dsljto6k" path="res://Scenes/catalogue/tuna.png" id="9_mnkxx"]
+[ext_resource type="Texture2D" uid="uid://c6wfyjd0esist" path="res://Scenes/catalogue/shark.png" id="10_vgh8x"]
+[ext_resource type="Texture2D" uid="uid://cto0pwahrnya8" path="res://Scenes/catalogue/seahorse.png" id="11_4u4fp"]
+[ext_resource type="Texture2D" uid="uid://bxjss2afulqof" path="res://Scenes/catalogue/mahimahi.png" id="12_h824a"]
+[ext_resource type="Texture2D" uid="uid://c4nt6vrvh87xt" path="res://Scenes/catalogue/starfish.png" id="13_i20k5"]
+[ext_resource type="Texture2D" uid="uid://2nkusedutlrs" path="res://Scenes/catalogue/scallop.png" id="14_q10bh"]
+[ext_resource type="Texture2D" uid="uid://ch4y0df0mnyja" path="res://Scenes/catalogue/fish_skele.png" id="15_5t47l"]
+[ext_resource type="Texture2D" uid="uid://cabglyc4rvs5r" path="res://Scenes/catalogue/boot.png" id="16_rba5c"]
+[ext_resource type="Texture2D" uid="uid://blfx6kiky74kq" path="res://Scenes/catalogue/seaweed.png" id="17_kdhm7"]
+[ext_resource type="Texture2D" uid="uid://cu6alxiswlcen" path="res://Scenes/catalogue/anchor.png" id="18_r4dd7"]
+[ext_resource type="Texture2D" uid="uid://b8d55uvceih4u" path="res://Scenes/catalogue/soda.png" id="19_m5gsf"]
+[ext_resource type="Texture2D" uid="uid://b3xqwvm4o1pye" path="res://Art/UI/selected_16.png" id="20_isikx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fyoko"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7wynu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xg3my"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_riarh"]
+texture = ExtResource("20_isikx")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p2v1w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_igy38"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_abkaw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8nm18"]
+texture = ExtResource("20_isikx")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hrcir"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hkhrl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mncqd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fm2vg"]
+texture = ExtResource("20_isikx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q47rc"]
+texture = ExtResource("20_isikx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6s158"]
+texture = ExtResource("20_isikx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_586iy"]
+texture = ExtResource("20_isikx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mdl67"]
+texture = ExtResource("20_isikx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e7boi"]
+texture = ExtResource("20_isikx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_phk04"]
+texture = ExtResource("20_isikx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gm7by"]
+texture = ExtResource("20_isikx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fcfyp"]
+texture = ExtResource("20_isikx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xvbue"]
+texture = ExtResource("20_isikx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7dx14"]
+texture = ExtResource("2_e6bl1")
+texture_margin_top = 16.0
+region_rect = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v1cuq"]
+texture = ExtResource("2_e6bl1")
+region_rect = Rect2(64, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dgyk3"]
+texture = ExtResource("2_e6bl1")
+region_rect = Rect2(64, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_21te5"]
+texture = ExtResource("20_isikx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_57vfj"]
+texture = ExtResource("20_isikx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_abu07"]
+texture = ExtResource("20_isikx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nki7c"]
+texture = ExtResource("20_isikx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tpdln"]
+texture = ExtResource("2_e6bl1")
+region_rect = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g4ms7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hqqff"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_142le"]
+texture = ExtResource("20_isikx")
+
+[node name="catalogue" type="Node2D"]
+script = ExtResource("1_7bnl7")
+
+[node name="CatchablesCatalogueBg" type="Sprite2D" parent="."]
+position = Vector2(32, 32)
+texture = ExtResource("1_lmy6i")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_right = 64.0
+offset_bottom = 64.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 4
+
+[node name="sardine" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_neighbor_right = NodePath("../lionfish")
+focus_neighbor_bottom = NodePath("../tuna")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fyoko")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7wynu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xg3my")
+theme_override_styles/focus = SubResource("StyleBoxTexture_riarh")
+
+[node name="lionfish" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_neighbor_left = NodePath("../sardine")
+focus_neighbor_right = NodePath("../shrimp")
+focus_neighbor_bottom = NodePath("../shark")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p2v1w")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_igy38")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_abkaw")
+theme_override_styles/focus = SubResource("StyleBoxTexture_8nm18")
+
+[node name="shrimp" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_neighbor_left = NodePath("../lionfish")
+focus_neighbor_right = NodePath("../squid")
+focus_neighbor_bottom = NodePath("../seahorse")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hrcir")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hkhrl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mncqd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_fm2vg")
+
+[node name="squid" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_neighbor_left = NodePath("../shrimp")
+focus_neighbor_bottom = NodePath("../mahimahi")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hrcir")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hkhrl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mncqd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_q47rc")
+
+[node name="tuna" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_neighbor_top = NodePath("../sardine")
+focus_neighbor_right = NodePath("../shark")
+focus_neighbor_bottom = NodePath("../starfish")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hrcir")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hkhrl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mncqd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_6s158")
+
+[node name="shark" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_neighbor_left = NodePath("../tuna")
+focus_neighbor_top = NodePath("../lionfish")
+focus_neighbor_right = NodePath("../seahorse")
+focus_neighbor_bottom = NodePath("../scallop")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hrcir")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hkhrl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mncqd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_586iy")
+
+[node name="seahorse" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_neighbor_left = NodePath("../shark")
+focus_neighbor_top = NodePath("../shrimp")
+focus_neighbor_right = NodePath("../mahimahi")
+focus_neighbor_bottom = NodePath("../skeleton")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hrcir")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hkhrl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mncqd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_mdl67")
+
+[node name="mahimahi" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_neighbor_left = NodePath("../seahorse")
+focus_neighbor_top = NodePath("../squid")
+focus_neighbor_bottom = NodePath("../boot")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hrcir")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hkhrl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mncqd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_e7boi")
+
+[node name="starfish" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_neighbor_top = NodePath("../tuna")
+focus_neighbor_right = NodePath("../scallop")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hrcir")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hkhrl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mncqd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_phk04")
+
+[node name="scallop" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_neighbor_left = NodePath("../starfish")
+focus_neighbor_top = NodePath("../shark")
+focus_neighbor_right = NodePath("../skeleton")
+focus_neighbor_bottom = NodePath("../seaweed")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hrcir")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hkhrl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mncqd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_gm7by")
+
+[node name="skeleton" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_neighbor_left = NodePath("../scallop")
+focus_neighbor_top = NodePath("../seahorse")
+focus_neighbor_right = NodePath("../boot")
+focus_neighbor_bottom = NodePath("../anchor")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hrcir")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hkhrl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mncqd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_fcfyp")
+
+[node name="boot" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_neighbor_left = NodePath("../skeleton")
+focus_neighbor_top = NodePath("../mahimahi")
+focus_neighbor_bottom = NodePath("../can")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hrcir")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hkhrl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mncqd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_xvbue")
+
+[node name="back_btn" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_neighbor_top = NodePath("../starfish")
+focus_neighbor_right = NodePath("../seaweed")
+theme_override_styles/normal = SubResource("StyleBoxTexture_7dx14")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v1cuq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dgyk3")
+theme_override_styles/focus = SubResource("StyleBoxTexture_21te5")
+
+[node name="seaweed" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_neighbor_left = NodePath("../back_btn")
+focus_neighbor_top = NodePath("../scallop")
+focus_neighbor_right = NodePath("../anchor")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hrcir")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hkhrl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mncqd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_57vfj")
+
+[node name="anchor" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_neighbor_left = NodePath("../seaweed")
+focus_neighbor_top = NodePath("../skeleton")
+focus_neighbor_right = NodePath("../can")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hrcir")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hkhrl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mncqd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_abu07")
+
+[node name="can" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_neighbor_left = NodePath("../anchor")
+focus_neighbor_top = NodePath("../boot")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hrcir")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hkhrl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mncqd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_nki7c")
+
+[node name="select_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_hfmfw")
+
+[node name="Pages" type="Node2D" parent="."]
+
+[node name="Sardine" type="Node2D" parent="Pages"]
+
+[node name="Sardine" type="Sprite2D" parent="Pages/Sardine"]
+visible = false
+position = Vector2(32, 32)
+texture = ExtResource("5_c5l6t")
+
+[node name="Lionfish" type="Node2D" parent="Pages"]
+
+[node name="Lionfish" type="Sprite2D" parent="Pages/Lionfish"]
+visible = false
+position = Vector2(32, 32)
+texture = ExtResource("6_4otdw")
+
+[node name="Shrimp" type="Node2D" parent="Pages"]
+
+[node name="Shrimp" type="Sprite2D" parent="Pages/Shrimp"]
+visible = false
+position = Vector2(32, 32)
+texture = ExtResource("7_jckth")
+
+[node name="Squid" type="Node2D" parent="Pages"]
+
+[node name="Squid" type="Sprite2D" parent="Pages/Squid"]
+visible = false
+position = Vector2(32, 32)
+texture = ExtResource("8_80pte")
+
+[node name="Tuna" type="Node2D" parent="Pages"]
+
+[node name="Tuna" type="Sprite2D" parent="Pages/Tuna"]
+visible = false
+position = Vector2(32, 32)
+texture = ExtResource("9_mnkxx")
+
+[node name="Shark" type="Node2D" parent="Pages"]
+
+[node name="Shark" type="Sprite2D" parent="Pages/Shark"]
+visible = false
+position = Vector2(32, 32)
+texture = ExtResource("10_vgh8x")
+
+[node name="Seahorse" type="Node2D" parent="Pages"]
+
+[node name="Seahorse" type="Sprite2D" parent="Pages/Seahorse"]
+visible = false
+position = Vector2(32, 32)
+texture = ExtResource("11_4u4fp")
+
+[node name="Mahi" type="Node2D" parent="Pages"]
+
+[node name="Mahimahi" type="Sprite2D" parent="Pages/Mahi"]
+visible = false
+position = Vector2(32, 32)
+texture = ExtResource("12_h824a")
+
+[node name="Star" type="Node2D" parent="Pages"]
+
+[node name="Starfish" type="Sprite2D" parent="Pages/Star"]
+visible = false
+position = Vector2(32, 32)
+texture = ExtResource("13_i20k5")
+
+[node name="Scallop" type="Node2D" parent="Pages"]
+
+[node name="Scallop" type="Sprite2D" parent="Pages/Scallop"]
+visible = false
+position = Vector2(32, 32)
+texture = ExtResource("14_q10bh")
+
+[node name="Bones" type="Node2D" parent="Pages"]
+
+[node name="FishSkele" type="Sprite2D" parent="Pages/Bones"]
+visible = false
+position = Vector2(32, 32)
+texture = ExtResource("15_5t47l")
+
+[node name="Boot" type="Node2D" parent="Pages"]
+
+[node name="Boot" type="Sprite2D" parent="Pages/Boot"]
+visible = false
+position = Vector2(32, 32)
+texture = ExtResource("16_rba5c")
+
+[node name="Seaweed" type="Node2D" parent="Pages"]
+
+[node name="Seaweed" type="Sprite2D" parent="Pages/Seaweed"]
+visible = false
+position = Vector2(32, 32)
+texture = ExtResource("17_kdhm7")
+
+[node name="Anchor" type="Node2D" parent="Pages"]
+
+[node name="Anchor" type="Sprite2D" parent="Pages/Anchor"]
+visible = false
+position = Vector2(32, 32)
+texture = ExtResource("18_r4dd7")
+
+[node name="Soda" type="Node2D" parent="Pages"]
+
+[node name="Soda" type="Sprite2D" parent="Pages/Soda"]
+visible = false
+position = Vector2(32, 32)
+texture = ExtResource("19_m5gsf")
+
+[node name="back_btn_page" type="Button" parent="Pages"]
+visible = false
+offset_top = 48.0
+offset_right = 16.0
+offset_bottom = 64.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_tpdln")
+theme_override_styles/hover = SubResource("StyleBoxTexture_g4ms7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hqqff")
+theme_override_styles/focus = SubResource("StyleBoxTexture_142le")
+
+[connection signal="button_down" from="GridContainer/sardine" to="." method="_on_sardine_button_down"]
+[connection signal="button_up" from="GridContainer/sardine" to="." method="_on_sardine_button_up"]
+[connection signal="button_down" from="GridContainer/lionfish" to="." method="_on_lionfish_button_down"]
+[connection signal="button_up" from="GridContainer/lionfish" to="." method="_on_lionfish_button_up"]
+[connection signal="button_down" from="GridContainer/shrimp" to="." method="_on_shrimp_button_down"]
+[connection signal="button_up" from="GridContainer/shrimp" to="." method="_on_shrimp_button_up"]
+[connection signal="button_down" from="GridContainer/squid" to="." method="_on_squid_button_down"]
+[connection signal="button_up" from="GridContainer/squid" to="." method="_on_squid_button_up"]
+[connection signal="button_down" from="GridContainer/tuna" to="." method="_on_tuna_button_down"]
+[connection signal="button_up" from="GridContainer/tuna" to="." method="_on_tuna_button_up"]
+[connection signal="button_down" from="GridContainer/shark" to="." method="_on_shark_button_down"]
+[connection signal="button_up" from="GridContainer/shark" to="." method="_on_shark_button_up"]
+[connection signal="button_down" from="GridContainer/seahorse" to="." method="_on_seahorse_button_down"]
+[connection signal="button_up" from="GridContainer/seahorse" to="." method="_on_seahorse_button_up"]
+[connection signal="button_down" from="GridContainer/mahimahi" to="." method="_on_mahimahi_button_down"]
+[connection signal="button_up" from="GridContainer/mahimahi" to="." method="_on_mahimahi_button_up"]
+[connection signal="button_down" from="GridContainer/starfish" to="." method="_on_starfish_button_down"]
+[connection signal="button_up" from="GridContainer/starfish" to="." method="_on_starfish_button_up"]
+[connection signal="button_down" from="GridContainer/scallop" to="." method="_on_scallop_button_down"]
+[connection signal="button_up" from="GridContainer/scallop" to="." method="_on_scallop_button_up"]
+[connection signal="button_down" from="GridContainer/skeleton" to="." method="_on_skeleton_button_down"]
+[connection signal="button_up" from="GridContainer/skeleton" to="." method="_on_skeleton_button_up"]
+[connection signal="button_down" from="GridContainer/boot" to="." method="_on_boot_button_down"]
+[connection signal="button_up" from="GridContainer/boot" to="." method="_on_boot_button_up"]
+[connection signal="button_down" from="GridContainer/back_btn" to="." method="_on_back_btn_button_down"]
+[connection signal="button_up" from="GridContainer/back_btn" to="." method="_on_back_btn_button_up"]
+[connection signal="button_down" from="GridContainer/seaweed" to="." method="_on_seaweed_button_down"]
+[connection signal="button_up" from="GridContainer/seaweed" to="." method="_on_seaweed_button_up"]
+[connection signal="button_down" from="GridContainer/anchor" to="." method="_on_anchor_button_down"]
+[connection signal="button_up" from="GridContainer/anchor" to="." method="_on_anchor_button_up"]
+[connection signal="button_down" from="GridContainer/can" to="." method="_on_can_button_down"]
+[connection signal="button_up" from="GridContainer/can" to="." method="_on_can_button_up"]
+[connection signal="button_down" from="Pages/back_btn_page" to="." method="_on_back_btn_page_button_down"]
+[connection signal="button_up" from="Pages/back_btn_page" to="." method="_on_back_btn_page_button_up"]
